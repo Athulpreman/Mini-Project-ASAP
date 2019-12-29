@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mini Project Book</string>
+    <string name="title_activity_admin_logged_in">AdminLoggedIn</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string-array name="district">
+        <item>Kannur</item>
+        <item>Kozhikkode</item>
+        <item>Malappuram</item>
+        <item>Wayanad</item>
+        <item>Idukki</item>
+    </string-array>
+</resources>
