@@ -54,6 +54,26 @@
         <EditText android:id="@+id/AddBookPrice"
             android:layout_marginRight="10dp"/>
     </TableRow>
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/ImageIdPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="141dp"
+            android:layout_marginLeft="20dp"
+            android:hint="Upload Image" />
+
+        <Button
+            android:id="@+id/AddBookImageButton"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button2"
+            android:text="Browse"
+            android:textColor="#ffffff"
+            android:textStyle="italic" />
+    </TableRow>
     <TableRow android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

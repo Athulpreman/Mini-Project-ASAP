@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        e1=(EditText)findViewById(R.id.adminUsername);
-        e2=(EditText)findViewById(R.id.adminPassword);
+        e1=(EditText)findViewById(R.id.Username);
+        e2=(EditText)findViewById(R.id.Password);
         b1=(Button)findViewById(R.id.adminLogin);
         t1=(TextView)findViewById(R.id.adminStudentRegistration);
 
@@ -60,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     if (AdminUsername.equals("admin")&&AdminPassword.equals("1234"))
                     {
                         Toast.makeText(getApplicationContext(),"Succesfully Loged in",Toast.LENGTH_LONG).show();
-
+                        e1.setText("");
+                        e2.setText("");
                         Intent intent=new Intent(getApplicationContext(), AdminLoggedIn.class);
                         startActivity(intent);
                     }

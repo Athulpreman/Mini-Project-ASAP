@@ -67,4 +67,17 @@
             android:editable="false"/>
     </TableRow>
 
+    <TableRow android:layout_height="130dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp">
+        <TextView android:text="ImageBook of "
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="65dp"/>
+
+        <ImageView
+            android:id="@+id/showImgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp" />
+    </TableRow>
+
 </TableLayout>
