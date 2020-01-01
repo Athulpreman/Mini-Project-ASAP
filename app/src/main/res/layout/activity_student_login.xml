@@ -24,7 +24,8 @@
         <TableRow>
             <TextView android:layout_height="match_parent"
                 android:layout_width="match_parent"
-                android:text="Username"
+                android:text="Email Id"
+                android:inputType="textEmailAddress"
                 android:layout_marginLeft="25dp"
                 android:textColor="#000000"
                 android:textSize="18dp"
@@ -60,7 +61,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="100dp"
                 android:text="Login"
-                android:id="@+id/adminLogin"
+                android:id="@+id/studentLogin1"
                 android:textSize="18dp"
                 android:background="@drawable/button2"
                 android:textColor="#000000"

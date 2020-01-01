@@ -9,7 +9,7 @@
         android:gravity="center"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <TableRow android:gravity="center">
-            <TextView android:text="Enter Student Details"
+            <TextView android:text="Student Profile"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="25dp"
@@ -20,38 +20,43 @@
             <TextView android:text="Student Name"
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentName"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:editable="false"/>
         </TableRow>
         <TableRow>
             <TextView android:text="Admission No."
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentAdmNo"
                 android:inputType="number"
+                android:editable="false"
                 android:layout_marginRight="10dp"/>
         </TableRow>
         <TableRow>
             <TextView android:text="Place"
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentPlace"
+                android:editable="false"
                 android:layout_marginRight="10dp"/>
         </TableRow>
         <TableRow>
             <TextView android:text="District"
                 android:layout_marginLeft="20dp"/>
-            <Spinner android:id="@+id/StudentDistrict"
-                android:entries="@array/district"
+            <EditText android:id="@+id/StudentDistrict"
+                android:editable="false"
                 android:layout_marginRight="10dp"/>
         </TableRow>
         <TableRow>
             <TextView android:text="Parent Name"
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentParent"
+                android:editable="false"
                 android:layout_marginRight="10dp"/>
         </TableRow>
         <TableRow>
             <TextView android:text="Mobile No."
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentMobileNo"
+                android:editable="false"
                 android:inputType="number"
                 android:layout_marginRight="10dp"/>
         </TableRow>
@@ -59,6 +64,7 @@
             <TextView android:text="Email id"
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentEmailId"
+                android:editable="false"
                 android:inputType="textEmailAddress"
                 android:layout_marginRight="10dp"/>
         </TableRow>
@@ -66,26 +72,40 @@
             <TextView android:text="Password"
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentPass"
+                android:editable="false"
                 android:inputType="textPassword"
                 android:layout_marginRight="10dp"/>
         </TableRow>
-        <TableRow>
-            <TextView android:text="Confirm Password"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/StudentConfirmPass"
-                android:inputType="textPassword"
-                android:layout_marginRight="10dp"/>
-        </TableRow>
+
         <TableRow android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button android:text="Submit"
+            <Button android:text="Show Details"
                 android:layout_height="match_parent"
                 android:layout_width="30dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button2"
                 android:id="@+id/AddBookSubmit"
                 android:layout_marginBottom="10dp"/>
+        </TableRow>
+        <TableRow android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText android:hint="Change Passsword"
+                android:id="@+id/StudentPasswordChange"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:id="@+id/StudentPasswordResetButton"
+                android:layout_width="3dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button2"
+                android:text="Submit" />
         </TableRow>
     </TableLayout>
 

@@ -1,0 +1,31 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/gradient"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Book"
+        android:background="@drawable/button2"
+        android:id="@+id/StudentSearchBook"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View All Book"
+        android:background="@drawable/button2"
+
+        android:id="@+id/StudentViewAllBook"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        android:background="@drawable/button2"
+
+        android:id="@+id/StudentViewProfile"/>
+
+
+
+</LinearLayout>
