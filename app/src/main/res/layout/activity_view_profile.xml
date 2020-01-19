@@ -73,7 +73,6 @@
                 android:layout_marginLeft="20dp"/>
             <EditText android:id="@+id/StudentPass"
                 android:editable="false"
-                android:inputType="textPassword"
                 android:layout_marginRight="10dp"/>
         </TableRow>
 

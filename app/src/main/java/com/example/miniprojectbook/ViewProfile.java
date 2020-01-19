@@ -71,32 +71,41 @@ public class ViewProfile extends AppCompatActivity {
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                final String s=e9.getText().toString();
-                Query query=refe.orderByChild("email").equalTo(email1);
-                query.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            public void onClick(View v) {
+                final String s = e9.getText().toString();
+                if (s.isEmpty())
+                {
+                    e9.setText("password cannot be empty");
+                }
+                else
                     {
-                        for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
-                        {
-                            dataSnapshot1.getRef().child("password").setValue(s);
+                    Query query = refe.orderByChild("email").equalTo(email1);
+                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                                dataSnapshot1.getRef().child("password").setValue(s);
 
-                            Toast.makeText(getApplicationContext(),"Password Changed Sucessfully",Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Password Changed Sucessfully", Toast.LENGTH_LONG).show();
+                                e9.setText("");
+                            }
+
                         }
 
-                    }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                            Toast.makeText(getApplicationContext(), "Error..!", Toast.LENGTH_LONG).show();
 
-                        Toast.makeText(getApplicationContext(),"Error..!",Toast.LENGTH_LONG).show();
+                        }
+                    });
 
-                    }
-                });
+                }
 
             }
         });
+
+
+
     }
 }

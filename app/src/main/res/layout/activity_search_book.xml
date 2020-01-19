@@ -3,89 +3,105 @@
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TableLayout android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:stretchColumns="1"
+    <TableLayout
         android:background="@drawable/gradient"
-        android:gravity="center"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-        <TableRow>
-            <TextView android:text="Book Title"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchBookTitle"
-                android:layout_marginRight="10dp"/>
-        </TableRow>
-        <TableRow android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TableLayout android:layout_height="550dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:stretchColumns="1"
 
-            <Button
-                android:id="@+id/SearchBookSearchButton"
-                android:layout_width="180dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/button2"
-                android:text="Search" />
-        </TableRow>
-        <TableRow android:layout_marginTop="30dp">
-            <TextView android:text="Book Code"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchResultBookCode"
-                android:layout_marginRight="10dp"
-                android:editable="false"/>
-        </TableRow>
+            android:gravity="bottom"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <TableRow>
+                <TextView android:text="Book Title"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchBookTitle"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+            <TableRow android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <TableRow>
-            <TextView android:text="Book Description"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchResultBookDescription"
-                android:layout_marginRight="10dp"
-                android:editable="false"/>
-        </TableRow>
-        <TableRow>
-            <TextView android:text="Book Author"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchResultBookAuthor"
-                android:layout_marginRight="10dp"
-                android:editable="false"/>
-        </TableRow>
-        <TableRow>
-            <TextView android:text="Book Publisher"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchResultBookPublisher"
-                android:layout_marginRight="10dp"
-                android:editable="false"/>
-        </TableRow>
-        <TableRow>
-            <TextView android:text="Book Type"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchResultBookType"
-                android:layout_marginRight="10dp"
-                android:editable="false"/>
-        </TableRow>
-        <TableRow>
-            <TextView android:text="Book Price"
-                android:layout_marginLeft="20dp"/>
-            <EditText android:id="@+id/SearchResultBookPrice"
-                android:layout_marginRight="10dp"
-                android:editable="false"/>
-        </TableRow>
+                <Button
+                    android:id="@+id/SearchBookSearchButton"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button2"
+                    android:text="Search" />
+            </TableRow>
+            <TableRow android:layout_marginTop="30dp">
+                <TextView android:text="Book Code"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchResultBookCode"
+                    android:layout_marginRight="10dp"
+                    android:editable="false"/>
+            </TableRow>
 
-        <TableRow android:layout_height="130dp"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="15dp">
-            <TextView android:text="ImageBook of "
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="65dp"/>
+            <TableRow>
+                <TextView android:text="Book Description"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchResultBookDescription"
+                    android:layout_marginRight="10dp"
+                    android:editable="false"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Book Author"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchResultBookAuthor"
+                    android:layout_marginRight="10dp"
+                    android:editable="false"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Book Publisher"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchResultBookPublisher"
+                    android:layout_marginRight="10dp"
+                    android:editable="false"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:text="Book Type"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchResultBookType"
+                    android:layout_marginRight="10dp"
+                    android:editable="false"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginBottom="40dp">
+                <TextView android:text="Book Price"
+                    android:layout_marginLeft="20dp"/>
+                <EditText android:id="@+id/SearchResultBookPrice"
+                    android:layout_marginRight="10dp"
+                    android:editable="false"/>
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="1">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:text="ImageBook of "
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="65dp"/>
 
-            <ImageView
-                android:id="@+id/showImgSearch"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp" />
-        </TableRow>
+                <ImageView
+                    android:id="@+id/showImgSearch"
+                    android:layout_width="170dp"
+                    android:layout_height="150dp" />
+            </TableRow>
+
+        </TableLayout>
+
+
 
     </TableLayout>
-
 
 </ScrollView>
