@@ -4,8 +4,7 @@ public class Book
 {
     public String code,title,description,author,type,publisher,price,img;
 
-    public Book()
-    {
+    public Book() {
     }
 
     public Book(String code, String title, String description, String author, String type, String publisher, String price, String img) {
@@ -18,6 +17,8 @@ public class Book
         this.price = price;
         this.img = img;
     }
+
+
 
     public String getCode() {
         return code;
