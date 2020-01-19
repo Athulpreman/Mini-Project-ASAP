@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.miniprojectbook.Book;
 import com.example.miniprojectbook.R;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +49,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         holder.t5.setText(books.get(position).getType());
         holder.t6.setText(books.get(position).getPublisher());
         holder.t7.setText(books.get(position).getPrice());
-        holder.t8.setText(books.get(position).getImg());
+        Picasso.with(context).load(books.get(position).getImg()).into(holder.imageView);
     }
 
     @Override
@@ -59,6 +61,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     class BookViewHolder extends RecyclerView.ViewHolder
     {
         TextView t1,t2,t3,t4,t5,t6,t7,t8;
+        ImageView imageView;
 
         public BookViewHolder(@NonNull View bookView) {
             super(bookView);
@@ -69,7 +72,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             t5=(TextView)bookView.findViewById(R.id.btype);
             t6=(TextView)bookView.findViewById(R.id.bpubli);
             t7=(TextView)bookView.findViewById(R.id.bprice);
-            t8=(TextView)bookView.findViewById(R.id.bimg);
+            imageView=(ImageView) bookView.findViewById(R.id.imagesow);
         }
     }
 }
